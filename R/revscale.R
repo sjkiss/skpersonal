@@ -37,7 +37,7 @@
 
 #define arguments
 revScale<-function(var, reverse=F, to=c(0,1)){
- if(min(var)<= -1) stop("this function cannot handle negative numbers")
+ if(min(var, na.rm=T)<= -1) stop("this function cannot handle negative numbers")
    #Under the no reverse condition, just rescale to the values defined in to
   if (reverse==F){
   out<-  scales::rescale(as.numeric(var), to)
