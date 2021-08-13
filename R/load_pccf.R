@@ -11,5 +11,5 @@ column_names <- c("Postal_code", "FSA", "PR", "CDuid", "CSDuid", "CSDname", "CSD
 
 names(pccf_fwf) = column_names
 library(usethis)
-use_data(pccf_fwf)
+use_data(pccf_fwf, overwrite=T)
 
